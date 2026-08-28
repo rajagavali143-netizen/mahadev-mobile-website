@@ -2,61 +2,375 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Mahadev Mobiles Sales & Service - Professional Mobile Repair, Sales & Accessories">
 <title>Mahadev Mobiles | Sales & Service</title>
 
 <style>
-*{box-sizing:border-box;margin:0;padding:0}
+*{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{font-family:Arial,sans-serif;background:#080808;color:#fff;line-height:1.6}
-header{height:70px;padding:0 6%;display:flex;align-items:center;justify-content:space-between;background:#090909;border-bottom:1px solid #222;position:sticky;top:0;z-index:10}
-.logo{font-size:20px;font-weight:800}.logo span{color:#ffd21c}
-nav a{color:#fff;text-decoration:none;margin-left:20px;font-size:14px}
-.hero{min-height:650px;padding:75px 7%;display:flex;align-items:center;background:radial-gradient(circle at 80% 30%,#493d00,#090909 48%);position:relative;overflow:hidden}
-.hero:after{content:"";position:absolute;width:300px;height:300px;border-radius:50%;background:#ffd21c;opacity:.08;right:-100px;top:100px}
-.content{max-width:650px;position:relative;z-index:2}
-.tag{display:inline-block;color:#080808;background:#ffd21c;padding:8px 15px;border-radius:30px;font-size:12px;font-weight:bold;margin-bottom:20px}
-h1{font-size:clamp(42px,8vw,72px);line-height:1.02;margin-bottom:20px}
+body{
+font-family:Arial,Helvetica,sans-serif;
+background:#050505;
+color:#fff;
+line-height:1.6;
+overflow-x:hidden
+}
+header{
+height:68px;
+padding:0 6%;
+display:flex;
+align-items:center;
+justify-content:space-between;
+background:#050505;
+border-bottom:1px solid #222;
+position:sticky;
+top:0;
+z-index:100
+}
+.logo{
+font-size:20px;
+font-weight:800
+}
+.logo span{color:#ffd21c}
+nav a{
+color:#aaa;
+text-decoration:none;
+margin-left:22px;
+font-size:14px
+}
+nav a:hover{color:#ffd21c}
+
+.hero{
+min-height:720px;
+padding:65px 7%;
+display:flex;
+align-items:center;
+position:relative;
+overflow:hidden;
+background:
+radial-gradient(circle at 75% 45%,rgba(255,210,28,.16),transparent 28%),
+linear-gradient(135deg,#050505,#0b0b0b)
+}
+.hero:before{
+content:"";
+position:absolute;
+width:420px;
+height:420px;
+right:-170px;
+top:120px;
+border-radius:50%;
+background:#ffd21c;
+filter:blur(100px);
+opacity:.12
+}
+.content{
+width:58%;
+position:relative;
+z-index:2
+}
+.tag{
+display:inline-block;
+background:#ffd21c;
+color:#080808;
+padding:8px 15px;
+border-radius:30px;
+font-size:11px;
+font-weight:800;
+letter-spacing:.5px;
+margin-bottom:22px
+}
+h1{
+font-size:clamp(44px,7vw,72px);
+line-height:1.02;
+letter-spacing:-2px;
+margin-bottom:22px
+}
 h1 span{color:#ffd21c}
-.hero p{color:#cfcfcf;font-size:18px;margin-bottom:28px}
-.buttons{display:flex;gap:12px;flex-wrap:wrap}
-.btn{padding:14px 22px;border-radius:9px;text-decoration:none;font-weight:bold;display:inline-block}
-.yellow{background:#ffd21c;color:#080808}
-.dark{border:1px solid #555;color:#fff}
-section{padding:70px 7%}
-.title{text-align:center;margin-bottom:40px}
-.title h2{font-size:38px}.title p{color:#999}
-.services{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-.card{background:#111;border:1px solid #252525;border-radius:16px;padding:25px;transition:.25s}
-.card:hover{transform:translateY(-5px);border-color:#ffd21c}
-.icon{font-size:34px;margin-bottom:12px}
-.card h3{margin-bottom:7px}.card p{color:#999;font-size:14px}
-.offer{background:#ffd21c;color:#080808;text-align:center}
-.offer h2{font-size:40px}.offer p{margin:10px auto 25px;max-width:600px}
-.offer .btn{background:#080808;color:#fff}
-.about{background:#0d0d0d}
-.aboutbox{max-width:800px;margin:auto;text-align:center}
-.aboutbox h2{font-size:38px;margin-bottom:15px}
-.aboutbox p{color:#aaa}
-.contact{text-align:center;background:#050505}
-.contact h2{font-size:40px;margin-bottom:10px}
-.contact p{color:#aaa;margin-bottom:25px}
-footer{text-align:center;padding:30px 15px;background:#000;color:#777;font-size:13px}
-footer strong{display:block;color:#fff;font-size:17px;margin-bottom:5px}
-.float{position:fixed;right:18px;bottom:18px;background:#25d366;color:#fff;width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;text-decoration:none;font-size:27px;z-index:20;box-shadow:0 5px 20px #000}
+.hero p{
+color:#aaa;
+font-size:17px;
+max-width:560px;
+margin-bottom:30px
+}
+.buttons{
+display:flex;
+gap:12px;
+flex-wrap:wrap
+}
+.btn{
+padding:14px 22px;
+border-radius:10px;
+font-weight:800;
+text-decoration:none;
+display:inline-block;
+transition:.25s
+}
+.yellow{
+background:#ffd21c;
+color:#080808
+}
+.yellow:hover{
+transform:translateY(-3px);
+box-shadow:0 10px 30px rgba(255,210,28,.2)
+}
+.dark{
+border:1px solid #555;
+color:#fff
+}
+.dark:hover{
+border-color:#ffd21c;
+color:#ffd21c
+}
+
+/* CINEMATIC PHONE */
+.phone-wrap{
+width:42%;
+display:flex;
+justify-content:center;
+align-items:center;
+position:relative;
+z-index:2
+}
+.phone-glow{
+position:absolute;
+width:270px;
+height:270px;
+background:#ffd21c;
+filter:blur(70px);
+opacity:.16
+}
+.phone{
+width:190px;
+height:370px;
+border:7px solid #222;
+border-radius:32px;
+background:linear-gradient(150deg,#171717,#050505);
+box-shadow:
+0 0 0 2px #444,
+0 25px 70px #000,
+0 0 50px rgba(255,210,28,.15);
+position:relative;
+transform:rotate(7deg);
+animation:float 4s ease-in-out infinite
+}
+.phone:before{
+content:"";
+position:absolute;
+top:8px;
+left:50%;
+transform:translateX(-50%);
+width:70px;
+height:18px;
+background:#000;
+border-radius:20px
+}
+.phone-screen{
+position:absolute;
+inset:12px;
+border-radius:23px;
+overflow:hidden;
+background:
+radial-gradient(circle at 65% 25%,#ffd21c 0,transparent 22%),
+linear-gradient(145deg,#151515,#050505)
+}
+.screen-logo{
+position:absolute;
+top:90px;
+width:100%;
+text-align:center;
+font-size:22px;
+font-weight:900
+}
+.screen-logo span{color:#ffd21c}
+.screen-line{
+position:absolute;
+left:25px;
+right:25px;
+height:2px;
+background:#ffd21c;
+opacity:.6;
+top:145px
+}
+.screen-text{
+position:absolute;
+top:165px;
+width:100%;
+text-align:center;
+font-size:11px;
+color:#aaa;
+letter-spacing:1px
+}
+@keyframes float{
+0%,100%{transform:rotate(7deg) translateY(0)}
+50%{transform:rotate(4deg) translateY(-12px)}
+}
+
+section{padding:75px 7%}
+.title{
+text-align:center;
+margin-bottom:42px
+}
+.title h2{
+font-size:38px;
+margin-bottom:7px
+}
+.title p{color:#888}
+
+.services{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:16px
+}
+.card{
+background:#0e0e0e;
+border:1px solid #242424;
+border-radius:17px;
+padding:27px;
+transition:.3s
+}
+.card:hover{
+transform:translateY(-6px);
+border-color:#ffd21c;
+box-shadow:0 15px 40px rgba(0,0,0,.4)
+}
+.icon{
+font-size:32px;
+margin-bottom:14px
+}
+.card h3{margin-bottom:7px}
+.card p{
+color:#888;
+font-size:14px
+}
+
+.offer{
+background:
+linear-gradient(120deg,#ffd21c,#f3c400);
+color:#080808;
+text-align:center
+}
+.offer h2{font-size:40px}
+.offer p{
+margin:8px auto 25px;
+max-width:600px
+}
+.offer .btn{
+background:#080808;
+color:#fff
+}
+
+.about{
+background:#0b0b0b
+}
+.aboutbox{
+max-width:800px;
+margin:auto;
+text-align:center
+}
+.aboutbox h2{
+font-size:40px;
+margin-bottom:15px
+}
+.aboutbox p{color:#999}
+
+.contact{
+text-align:center;
+background:#050505
+}
+.contact h2{
+font-size:40px;
+margin-bottom:8px
+}
+.contact p{
+color:#888;
+margin-bottom:25px
+}
+
+footer{
+padding:30px 15px;
+text-align:center;
+background:#000;
+color:#666;
+font-size:13px
+}
+footer strong{
+display:block;
+color:#fff;
+font-size:17px;
+margin-bottom:5px
+}
+
+.float{
+position:fixed;
+right:18px;
+bottom:18px;
+width:57px;
+height:57px;
+border-radius:50%;
+background:#25d366;
+color:#fff;
+display:flex;
+align-items:center;
+justify-content:center;
+text-decoration:none;
+font-size:26px;
+z-index:200;
+box-shadow:0 8px 25px #000
+}
+
 @media(max-width:800px){
 nav{display:none}
-.hero{min-height:620px;padding:65px 6%;align-items:flex-end}
-h1{font-size:48px}
-.hero p{font-size:16px}
-.services{grid-template-columns:1fr 1fr}
-section{padding:55px 6%}
+.hero{
+min-height:760px;
+padding:55px 6%;
+display:block
 }
+.content{
+width:100%;
+padding-top:15px
+}
+.phone-wrap{
+width:100%;
+height:330px;
+margin-top:25px
+}
+.phone{
+width:150px;
+height:295px
+}
+.screen-logo{top:70px;font-size:18px}
+.screen-line{top:115px}
+.screen-text{top:135px}
+.services{
+grid-template-columns:1fr 1fr
+}
+section{padding:60px 6%}
+}
+
 @media(max-width:520px){
-.services{grid-template-columns:1fr}
-.card{padding:22px}
-.offer h2,.aboutbox h2,.contact h2{font-size:31px}
+.hero{
+min-height:750px
+}
+h1{
+font-size:47px;
+letter-spacing:-1.5px
+}
+.hero p{font-size:16px}
+.phone-wrap{height:300px}
+.phone{
+width:140px;
+height:275px
+}
+.services{
+grid-template-columns:1fr
+}
+.title h2,
+.offer h2,
+.aboutbox h2,
+.contact h2{
+font-size:32px
+}
 }
 </style>
 </head>
@@ -65,6 +379,7 @@ section{padding:55px 6%}
 
 <header>
 <div class="logo">📱 Mahadev <span>Mobiles</span></div>
+
 <nav>
 <a href="#services">Services</a>
 <a href="#offers">Offers</a>
@@ -74,27 +389,62 @@ section{padding:55px 6%}
 </header>
 
 <section class="hero">
-<div class="content">
-<div class="tag">MOBILE SALES • REPAIR • ACCESSORIES</div>
 
-<h1>Smart Repair.<br><span>Trusted Service.</span></h1>
+<div class="content">
+
+<div class="tag">
+MOBILE SALES • REPAIR • ACCESSORIES
+</div>
+
+<h1>
+Smart Repair.<br>
+<span>Trusted Service.</span>
+</h1>
 
 <p>
 Professional mobile repairing, sales and accessories
-with a focus on quality service and customer trust.
+with quality workmanship, honest service and customer trust.
 </p>
 
 <div class="buttons">
 <a class="btn yellow" href="#contact">🔧 Book a Repair</a>
-<a class="btn dark" href="https://wa.me/918624818403" target="_blank">💬 WhatsApp</a>
+
+<a class="btn dark"
+href="https://wa.me/918624818403"
+target="_blank">
+💬 WhatsApp
+</a>
+</div>
+
+</div>
+
+<div class="phone-wrap">
+<div class="phone-glow"></div>
+
+<div class="phone">
+<div class="phone-screen">
+
+<div class="screen-logo">
+Mahadev <span>Mobiles</span>
+</div>
+
+<div class="screen-line"></div>
+
+<div class="screen-text">
+SALES • REPAIR • ACCESSORIES
+</div>
+
 </div>
 </div>
+</div>
+
 </section>
 
 <section id="services">
+
 <div class="title">
-<h2>What We Do</h2>
-<p>Complete mobile solutions in one place.</p>
+<h2>Our Services</h2>
+<p>Complete mobile solutions under one roof.</p>
 </div>
 
 <div class="services">
@@ -139,40 +489,80 @@ with a focus on quality service and customer trust.
 </section>
 
 <section id="offers" class="offer">
+
 <h2>Special Offers</h2>
-<p>Ask us about our latest mobile accessories and service offers.</p>
-<a class="btn" href="https://wa.me/918624818403" target="_blank">Ask on WhatsApp</a>
+
+<p>
+Ask us about our latest mobile accessories,
+service deals and special offers.
+</p>
+
+<a class="btn"
+href="https://wa.me/918624818403"
+target="_blank">
+View Offers on WhatsApp
+</a>
+
 </section>
 
 <section id="about" class="about">
+
 <div class="aboutbox">
+
 <h2>Built on Trust.</h2>
+
 <p>
-At Mahadev Mobiles Sales & Service, our focus is simple:
-professional diagnosis, quality repair work and clear
-communication with every customer.
+Mahadev Mobiles Sales & Service focuses on professional
+diagnosis, quality repair work and clear communication
+with every customer.
 </p>
+
 </div>
+
 </section>
 
 <section id="contact" class="contact">
+
 <h2>Need Mobile Service?</h2>
-<p>Call or WhatsApp us today.</p>
+
+<p>
+Call or WhatsApp us today.
+</p>
 
 <div class="buttons" style="justify-content:center">
-<a class="btn yellow" href="tel:+918624818403">📞 8624818403</a>
-<a class="btn dark" href="https://wa.me/918624818403" target="_blank">💬 WhatsApp</a>
+
+<a class="btn yellow"
+href="tel:+918624818403">
+📞 8624818403
+</a>
+
+<a class="btn dark"
+href="https://wa.me/918624818403"
+target="_blank">
+💬 WhatsApp
+</a>
+
 </div>
+
 </section>
 
 <footer>
+
 <strong>Mahadev Mobiles Sales & Service</strong>
+
 Professional Mobile Repairing • Sales • Accessories
+
 <br><br>
+
 © 2026 Mahadev Mobiles. All Rights Reserved.
+
 </footer>
 
-<a class="float" href="https://wa.me/918624818403" target="_blank">💬</a>
+<a class="float"
+href="https://wa.me/918624818403"
+target="_blank">
+💬
+</a>
 
 </body>
 </html>
